@@ -8,7 +8,7 @@ module OmniAuth
       option :client_options, {
         :site => 'https://demo-social-stream.dit.upm.es',
         :authorize_url => 'https://demo-social-stream.dit.upm.es/oauth2/authorize',
-        :token_url => 'https://demo-social-stream.dit.upm.es/oauth2/access_token'
+        :token_url => 'https://demo-social-stream.dit.upm.es/oauth2/token'
       }
 
       uid { raw_info['id'].to_s }
