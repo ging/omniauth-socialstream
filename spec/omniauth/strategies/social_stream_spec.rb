@@ -34,11 +34,11 @@ describe OmniAuth::Strategies::SocialStream do
     end
 
     it 'should have correct authorize url' do
-      subject.options.client_options.authorize_url.should eq('https://demo-social-stream.dit.upm.es/login/oauth/authorize')
+      subject.options.client_options.authorize_url.should eq('https://demo-social-stream.dit.upm.es/oauth2/authorize')
     end
 
     it 'should have correct token url' do
-      subject.options.client_options.token_url.should eq('https://demo-social-stream.dit.upm.es/login/oauth/access_token')
+      subject.options.client_options.token_url.should eq('https://demo-social-stream.dit.upm.es/oauth2/access_token')
     end
 
     describe "should be overrideable" do

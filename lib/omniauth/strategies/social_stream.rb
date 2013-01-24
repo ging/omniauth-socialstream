@@ -3,10 +3,12 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class SocialStream < OmniAuth::Strategies::OAuth2
+      option :name, 'social_stream'
+
       option :client_options, {
         :site => 'https://demo-social-stream.dit.upm.es',
-        :authorize_url => 'https://demo-social-stream.dit.upm.es/login/oauth/authorize',
-        :token_url => 'https://demo-social-stream.dit.upm.es/login/oauth/access_token'
+        :authorize_url => 'https://demo-social-stream.dit.upm.es/oauth2/authorize',
+        :token_url => 'https://demo-social-stream.dit.upm.es/oauth2/access_token'
       }
 
       uid { raw_info['id'].to_s }
