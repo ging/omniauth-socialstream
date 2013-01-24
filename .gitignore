@@ -1,0 +1,12 @@
+*.gem
+.bundle
+.config
+.yardoc
+Gemfile.lock
+coverage
+doc/
+/pkg
+rdoc
+spec/reports
+test/tmp
+tmp
