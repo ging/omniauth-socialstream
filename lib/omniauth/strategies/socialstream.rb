@@ -2,7 +2,9 @@ require 'omniauth-oauth2'
 
 module OmniAuth
   module Strategies
-    class SocialStream < OmniAuth::Strategies::OAuth2
+    class Socialstream < OmniAuth::Strategies::OAuth2
+      option :name, 'socialstream'
+
       option :client_options, {
         :site => 'https://demo-social-stream.dit.upm.es',
         :authorize_url => 'https://demo-social-stream.dit.upm.es/oauth2/authorize',
@@ -31,3 +33,4 @@ module OmniAuth
     end
   end
 end
+

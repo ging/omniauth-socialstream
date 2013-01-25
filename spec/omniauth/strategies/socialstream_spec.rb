@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe OmniAuth::Strategies::SocialStream do
+describe OmniAuth::Strategies::Socialstream do
   let(:access_token) { stub('AccessToken', :options => {}) }
   let(:parsed_response) { stub('ParsedResponse') }
   let(:response) { stub('Response', :parsed => parsed_response) }
@@ -9,7 +9,7 @@ describe OmniAuth::Strategies::SocialStream do
   let(:other_authorize_url) { 'https://some.other.site.com/login/oauth/authorize' }
   let(:other_token_url)     { 'https://some.other.site.com/login/oauth/access_token' }
   let(:other) do
-    OmniAuth::Strategies::SocialStream.new('SS_KEY', 'SS_SECRET',
+    OmniAuth::Strategies::Socialstream.new('SS_KEY', 'SS_SECRET',
         {
             :client_options => {
                 :site => other_site,
@@ -21,7 +21,7 @@ describe OmniAuth::Strategies::SocialStream do
   end
 
   subject do
-    OmniAuth::Strategies::SocialStream.new({})
+    OmniAuth::Strategies::Socialstream.new({})
   end
 
   before(:each) do

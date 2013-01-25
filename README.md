@@ -6,7 +6,7 @@ on the Social Stream node. There is an example in [Social Stream's demo site](ht
 
 ## Usage
 
-    provider :social_stream, ENV['SS_KEY'], ENV['SS_SECRET'],
+    provider :socialstream, ENV['SS_KEY'], ENV['SS_SECRET'],
         {
           :client_options => {
             :site => 'https://demo-social-stream.dit.upm.es/api',
