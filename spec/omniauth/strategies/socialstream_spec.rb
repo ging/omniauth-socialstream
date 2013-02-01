@@ -58,7 +58,8 @@ describe OmniAuth::Strategies::Socialstream do
 
   context "#raw_info" do
     it "should use relative paths" do
-      access_token.should_receive(:get).with('user').and_return(response)
+      access_token.should_receive(:token)
+      access_token.should_receive(:get).with('profile.json', {:params=>{:access_token=>nil}}).and_return(response)
       subject.raw_info.should eq(parsed_response)
     end
   end
